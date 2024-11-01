@@ -42,6 +42,7 @@ const Charts = ({ charts }) => {
         </h3>
       </div>
 
+      {/* charts */}
       <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-4">
         {charts.map((chart, index) => (
           <div key={index} className="bg-white py-4 rounded-lg shadow-md">

@@ -57,7 +57,7 @@ const DevelopmentActivity = ({ activity }) => {
           </AreaChart>
         </ResponsiveContainer>
 
-        {/* Scrollable data table */}
+        {/* data table */}
         <div className="overflow-y-auto max-h-72 mt-4 border-t border-gray-200">
           <table className="min-w-full">
             <thead className=" text-gray-700 text-sm uppercase">
