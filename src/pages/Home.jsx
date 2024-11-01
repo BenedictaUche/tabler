@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import StatsCard from '../components/StatsCard';
 import { fetchDashboardData } from '../services/api';
+import DevelopmentActivity from '../components/Activity';
 
 const Home = () => {
   const {isLoading, isError, data, error} = useQuery({
@@ -31,7 +32,7 @@ const Home = () => {
         ))}
       </div>
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div></div>
+        <DevelopmentActivity activity={data.activity}  />
         <div></div>
       </div>
     </div>
