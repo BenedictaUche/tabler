@@ -90,11 +90,11 @@ const Header = () => {
           className="absolute top-4 right-4 text-gray-600"
           onClick={() => setMobileMenuOpen(false)}
         >
-          <X size={24} />
+          <X size={32} />
         </button>
 
         {/* mobile navigation links */}
-        <nav className="flex flex-col p-4 space-y-4 mt-8">
+        <nav className="flex flex-col p-4 space-y-10 mt-8">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -110,7 +110,22 @@ const Header = () => {
               {link.name}
             </Link>
           ))}
+
+          <div className="flex justify-center gap-4 items-center">
+          <Bell size={32} className="text-gray-600" />
+          <a
+            href="https://github.com/BenedictaUche/tabler"
+            target="_blank"
+            rel="noopener noreferrer"
+
+          >
+            <button className="text-blue-500 border-2 border-blue-500 p-2 rounded-md ">
+              Source code
+            </button>
+          </a>
+          </div>
         </nav>
+
       </div>
     </header>
   );
