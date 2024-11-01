@@ -2,7 +2,7 @@ import React from 'react'
 
 const Forms = () => {
   return (
-    <div>Forms</div>
+    <div className='flex justify-center text-2xl font-bold'>Coming soon!</div>
   )
 }
 

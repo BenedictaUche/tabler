@@ -1,4 +1,4 @@
-import { Bell, Menu } from "lucide-react";
+import { Bell, Menu, House, Box, Component, StickyNote, SquareCheckBig, Images, FileText  } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -7,19 +7,19 @@ const Header = () => {
   const location = useLocation();
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Interface", path: "/interface" },
-    { name: "Components", path: "/components" },
-    { name: "Pages", path: "/pages" },
-    { name: "Forms", path: "/forms" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Documentation", path: "/documentation" },
+    { name: "Home", path: "/", icon: <House size={18} /> },
+    { name: "Interface", path: "/interface", icon: <Box size={18}/> },
+    { name: "Components", path: "/components", icon:  <Component size={18}/> },
+    { name: "Pages", path: "/pages", icon: <StickyNote size={18}/> },
+    { name: "Forms", path: "/forms", icon: <SquareCheckBig size={18}/> },
+    { name: "Gallery", path: "/gallery", icon: <Images size={18}/> },
+    { name: "Documentation", path: "/documentation",  icon: <FileText size={18}/> },
   ];
 
   return (
     <header className="bg-white shadow-md">
       {/* Main header */}
-      <div className="flex items-center justify-between p-4 border-b">
+      <div className="flex items-center justify-between py-4 sm:px-16 px-4 border-b">
         <div className="flex items-center space-x-4">
           <img src="/images/logo.png" alt="tabler logo" className="h-10" />
 
@@ -59,18 +59,19 @@ const Header = () => {
       </div>
 
       {/* Navigation tabs */}
-      <div className="hidden md:flex border-b">
+      <div className="hidden md:flex border-b px-16">
         <nav className="flex space-x-4 p-2 overflow-x-auto">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`px-4 py-2 text-gray-600 hover:text-blue-600 ${
+              className={`px-4 py-2 text-gray-600 hover:text-blue-600 flex gap-2 items-center ${
                 location.pathname === link.path
-                  ? "border-b-2 border-blue-600 font-medium"
+                  ? "border-b-2 border-blue-600 font-medium text-blue-600"
                   : ""
               }`}
             >
+              <span>{link.icon}</span>
               {link.name}
             </Link>
           ))}

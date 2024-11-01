@@ -1,9 +1,5 @@
 import React from "react";
-import { fetchDashboardData } from "../services/api";
-import { useQuery } from "@tanstack/react-query";
 import {
-  LineChart,
-  Line,
   XAxis,
   YAxis,
   Tooltip,
@@ -62,7 +58,7 @@ const DevelopmentActivity = ({ activity }) => {
         </ResponsiveContainer>
 
         {/* Scrollable data table */}
-        <div className="overflow-y-auto max-h-48 mt-4 border-t border-gray-200">
+        <div className="overflow-y-auto max-h-72 mt-4 border-t border-gray-200">
           <table className="min-w-full">
             <thead className=" text-gray-700 text-sm uppercase">
               <tr className="text-left">

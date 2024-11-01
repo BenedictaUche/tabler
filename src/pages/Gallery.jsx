@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <div className='flex justify-center text-2xl font-bold'>Coming soon!</div>
   )
 }
 

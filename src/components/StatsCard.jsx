@@ -11,7 +11,7 @@ const StatsCard = ({ stat }) => {
         {isPositive ? <ChevronUp className="w-4 h-4 font-semibold" /> : <ChevronDown className="w-4 h-4 font-semibold" />}
       </div>
       <h3 className="text-2xl font-semibold">{stat.value}</h3>
-      <p className="text-gray-500 text-sm">{stat.title}</p>
+      <p className="text-gray-500 text-sm font-medium">{stat.title}</p>
     </div>
   );
 };
