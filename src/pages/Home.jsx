@@ -22,12 +22,15 @@ const Home = () => {
 
   return (
     <div className="space-y-4 sm:px-14 px-2">
-      <h1 className="text-3xl font-semibold text-gray-500">Dashboard</h1>
+      <h1 className="text-2xl font-semibold text-gray-500">Dashboard</h1>
+      {/* Statscard */}
       <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
         {data.summary.map((stat, index) => (
           <StatsCard key={index} stat={stat} />
         ))}
       </div>
+
+      {/* Second row of home */}
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
         <DevelopmentActivity activity={data.activity} />
         <Charts charts={data.charts} />

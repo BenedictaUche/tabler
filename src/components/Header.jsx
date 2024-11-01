@@ -1,4 +1,4 @@
-import { Bell, Menu, House, Box, Component, StickyNote, SquareCheckBig, Images, FileText  } from "lucide-react";
+import { Bell, Menu, House, Box, Component, StickyNote, SquareCheckBig, Images, FileText, X } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -22,11 +22,10 @@ const Header = () => {
       <div className="flex items-center justify-between py-4 sm:px-16 px-4 border-b">
         <div className="flex items-center space-x-4">
           <img src="/images/logo.png" alt="tabler logo" className="h-10" />
-
         </div>
 
         <div className="flex items-center gap-4">
-        <a
+          <a
             href="https://github.com/BenedictaUche/tabler"
             target="_blank"
             rel="noopener noreferrer"
@@ -48,17 +47,17 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
+          {/* mobile menu button */}
           <button
             className="md:hidden text-gray-600"
-            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => setMobileMenuOpen(true)}
           >
             <Menu size={24} />
           </button>
         </div>
       </div>
 
-      {/* Navigation tabs */}
+      {/* navigation tabs */}
       <div className="hidden md:flex border-b px-16">
         <nav className="flex space-x-4 p-2 overflow-x-auto scrollbar-hide">
           {navLinks.map((link) => (
@@ -78,25 +77,39 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Mobile menu for smaller screens */}
-      {isMobileMenuOpen && (
-        <nav className="md:hidden bg-white shadow-md p-4">
+      {/* mobile menu for smaller screens */}
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-md transform ${
+          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out z-50`}
+      >
+        {/* close button */}
+        <button
+          className="absolute top-4 right-4 text-gray-600"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <X size={24} />
+        </button>
+
+        {/* mobile navigation links */}
+        <nav className="flex flex-col p-4 space-y-4 mt-8">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`block py-2 text-gray-600 hover:text-blue-600 ${
+              className={`text-gray-600 hover:text-blue-600 flex items-center gap-2 ${
                 location.pathname === link.path
-                  ? "border-b-2 border-blue-600 font-medium"
+                  ? "border-b-2 w-28 border-blue-600 font-medium text-blue-600"
                   : ""
               }`}
               onClick={() => setMobileMenuOpen(false)}
             >
+              <span>{link.icon}</span>
               {link.name}
             </Link>
           ))}
         </nav>
-      )}
+      </div>
     </header>
   );
 };
