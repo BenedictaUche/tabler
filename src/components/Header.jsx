@@ -17,47 +17,49 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-md px-14">
+    <header className="bg-white shadow-md">
       {/* Main header */}
-      {/* <div className="p-4 flex items-center justify-between border-b"> */}
-      <div className="p-4 border-b">
-        <div className="flex justify-between items-center space-x-4">
-          <img src="/images/logo.png" alt="tabler logo" className="h-6" />
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/BenedictaUche/tabler"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="text-blue-500 border-2 border-blue-500 p-2 rounded-md">
-                Source code
-              </button>
-            </a>
-            <Bell size={24} className="text-gray-600" />
-            <div className="flex items-center space-x-2">
-              <img
-                src="https://github.com/shadcn.png"
-                alt="User Avatar"
-                className="w-8 h-8 rounded-full"
-              />
-              <div className="text-sm text-gray-600">
-                <p className="text-lg font-normal">Jane Pearson</p>
-                <p className="text-xs font-normal">Administrator</p>
-              </div>
-            </div>
-          </div>
+      <div className="flex items-center justify-between p-4 border-b">
+        <div className="flex items-center space-x-4">
+          <img src="/images/logo.png" alt="tabler logo" className="h-10" />
+
         </div>
 
-        <button
-          className="md:hidden text-gray-600"
-          onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          <Menu size={24} />
-        </button>
+        <div className="flex items-center gap-4">
+        <a
+            href="https://github.com/BenedictaUche/tabler"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="text-blue-500 border-2 border-blue-500 p-2 rounded-md hidden md:block">
+              Source code
+            </button>
+          </a>
+          <Bell size={24} className="text-gray-600 hidden md:block" />
+          <div className="flex items-center space-x-2">
+            <img
+              src="https://github.com/shadcn.png"
+              alt="User Avatar"
+              className="w-8 h-8 rounded-full"
+            />
+            <div className="text-sm text-gray-600 hidden md:block">
+              <p className="text-lg font-normal">Jane Pearson</p>
+              <p className="text-xs font-normal">Administrator</p>
+            </div>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden text-gray-600"
+            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <Menu size={24} />
+          </button>
+        </div>
       </div>
 
       {/* Navigation tabs */}
-      <div className="sm:flex border-b hidden ">
+      <div className="hidden md:flex border-b">
         <nav className="flex space-x-4 p-2 overflow-x-auto">
           {navLinks.map((link) => (
             <Link
