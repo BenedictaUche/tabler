@@ -79,9 +79,11 @@ const Header = () => {
 
       {/* mobile menu for smaller screens */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-md transform ${
-          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out z-50`}
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-md transform transition-all duration-500 ease-out z-50 ${
+          isMobileMenuOpen
+            ? "translate-x-0 opacity-100 scale-100"
+            : "-translate-x-full opacity-0 scale-95"
+        }`}
       >
         {/* close button */}
         <button
