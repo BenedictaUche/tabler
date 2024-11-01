@@ -72,14 +72,14 @@ const DevelopmentActivity = ({ activity }) => {
                 <tr key={index} className="border-b border-gray-200">
                   <td className="px-4 py-2 flex items-center gap-4 ">
                     {" "}
-                    <span>
+                    <span className="sm:h-6 sm:w-6 h-6 w-10 rounded-full">
                       <img
                         src={item.imageUrl}
                         alt="User image"
-                        className="sm:h-6 sm:w-6 h-6 w-10 rounded-full"
+                        className="w-full rounded-full"
                       />
                     </span>
-                    {item.user}
+                    <p className="">{item.user}</p>
                   </td>
                   <td className="px-4 py-2">{item.commit}</td>
                   <td className="px-4 py-2">{item.date}</td>
