@@ -76,7 +76,7 @@ const DevelopmentActivity = ({ activity }) => {
                       <img
                         src={item.imageUrl}
                         alt="User image"
-                        className="h-6 w-6 rounded-full"
+                        className="sm:h-6 sm:w-6 h-6 w-10 rounded-full"
                       />
                     </span>
                     {item.user}

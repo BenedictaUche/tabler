@@ -17,7 +17,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       {/* Main header */}
       <div className="flex items-center justify-between py-4 sm:px-16 px-4 border-b">
         <div className="flex items-center space-x-4">
@@ -60,7 +60,7 @@ const Header = () => {
 
       {/* Navigation tabs */}
       <div className="hidden md:flex border-b px-16">
-        <nav className="flex space-x-4 p-2 overflow-x-auto">
+        <nav className="flex space-x-4 p-2 overflow-x-auto scrollbar-hide">
           {navLinks.map((link) => (
             <Link
               key={link.path}
