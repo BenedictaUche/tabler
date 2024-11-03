@@ -1,116 +1,116 @@
 {
   "summary": [
-    { "title": "New Tickets", "value": 43, "change": 6 },
-    { "title": "Closed Today", "value": 17, "change": "-3" },
-    { "title": "New Replies", "value": 7, "change": 9 },
-    { "title": "Followers", "value": "27.3k", "change": 3 },
-    { "title": "Daily Earnings", "value": "$95", "change": "-2" },
-    { "title": "Products", "value": 621, "change": "-1" }
+    { "title": "New Tickets", "value": 43, "change": 6, "progress": 40 },
+    { "title": "Closed Today", "value": 17, "change": "-3", "progress": 10 },
+    { "title": "New Replies", "value": 7, "change": 9, "progress": 57 },
+    { "title": "Followers", "value": "27.3k", "change": 3, "progress": 5 },
+    { "title": "Daily Earnings", "value": "$95", "change": "-2", "progress": 8 },
+    { "title": "Products", "value": 621, "change": "-1", "progress": 5 }
   ],
   "activity": [
     {
       "user": "Ronald Bradley",
       "commit": "Initial commit",
       "date": "May 6, 2018",
-      "development": 400,
+      "purchases": 50,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Russell Gibson",
       "commit": "Main structure",
       "date": "April 22, 2018",
-      "development": 235,
+      "purchases": 235,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "John Doe",
       "commit": "Left sidebar adjustments",
       "date": "April 15, 2018",
-      "development": 698,
+      "purchases": 698,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Jane Doe",
       "commit": "Header changed",
       "date": "April 22, 2018",
-      "development": 400,
+      "purchases": 400,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Emily Dawson",
       "commit": "Updated footer layout",
       "date": "March 30, 2018",
-      "development": 520,
+      "purchases": 520,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "John Smith",
       "commit": "Bug fixes in navbar",
       "date": "March 25, 2018",
-      "development": 305,
+      "purchases": 305,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Laura James",
       "commit": "Responsive layout improvements",
       "date": "March 10, 2018",
-      "development": 610,
+      "purchases": 610,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Michael Lee",
       "commit": "Added user authentication",
       "date": "February 20, 2018",
-      "development": 430,
+      "purchases": 430,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Natalie Brown",
       "commit": "Code refactoring",
       "date": "February 15, 2018",
-      "development": 310,
+      "purchases": 310,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Andrew Walker",
       "commit": "Database schema changes",
       "date": "February 1, 2018",
-      "development": 280,
+      "purchases": 280,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Sophia Martinez",
       "commit": "Added search functionality",
       "date": "January 20, 2018",
-      "development": 480,
+      "purchases": 480,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Kevin Harris",
       "commit": "Performance optimization",
       "date": "January 5, 2018",
-      "development": 550,
+      "purchases": 550,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Olivia Turner",
       "commit": "Updated API endpoints",
       "date": "December 20, 2017",
-      "development": 375,
+      "purchases": 375,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Ethan Cooper",
       "commit": "UI adjustments",
       "date": "December 10, 2017",
-      "development": 490,
+      "purchases": 490,
       "imageUrl": "https://github.com/shadcn.png"
     },
     {
       "user": "Grace Lee",
       "commit": "Accessibility improvements",
       "date": "November 15, 2017",
-      "development": 650,
+      "purchases": 650,
       "imageUrl": "https://github.com/shadcn.png"
     }
   ],

@@ -21,8 +21,8 @@ const Home = () => {
   }
 
   return (
-    <div className="space-y-4 sm:px-14 px-2">
-      <h1 className="text-2xl font-semibold text-gray-500">Dashboard</h1>
+    <div className="space-y-4 sm:px-14 px-0">
+      <h1 className="text-2xl font-semibold tablerText">Dashboard</h1>
       {/* Statscard */}
       <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
         {data.summary.map((stat, index) => (

@@ -1,5 +1,5 @@
 import React from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
 
 // color schemes for each chart
 const colorSchemes = {
@@ -53,7 +53,7 @@ const Charts = ({ charts }) => {
               <PieChart>
                 <Pie
                   data={chart.values.map((value, idx) => ({
-                    name: `Part ${idx + 1}`,
+                    name: `Tab ${idx + 1}`,
                     value,
                   }))}
                   dataKey="value"
@@ -73,6 +73,7 @@ const Charts = ({ charts }) => {
                   ))}
                 </Pie>
                 <Tooltip />
+                <Legend align="center" verticalAlign="bottom" iconType="circle" />
               </PieChart>
             </ResponsiveContainer>
           </div>

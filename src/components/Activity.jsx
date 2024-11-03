@@ -7,6 +7,7 @@ import {
   AreaChart,
   ReferenceLine,
   Area,
+  Legend
 } from "recharts";
 import { Trash } from "lucide-react";
 
@@ -23,36 +24,38 @@ const DevelopmentActivity = ({ activity }) => {
   const chartData = activity.map((item, index) => ({
     date: item.date,
     commit: item.commit,
-    value: item.development
+    Purchases: item.purchases
   }));
 
   return (
     <>
-      <div className="bg-white py-4 rounded-lg shadow-md">
-        <div className="border-b border-gray-300">
-          <h2 className="text-xl font-semibold text-gray-500 mb-4 px-4">
-            Development Activity
-          </h2>
+      <div className="bg-white pt-4 rounded-lg shadow-md">
+      <div className="">
+        <h2 className="text-xl font-semibold tablerText mb-4 px-4 border-b border-gray-300 py-2">
+          Development Activity
+        </h2>
+        <div className="text-gray-500 px-4">
+          <span className="text-lg font-semibold">Today's Earning: $4,262.40</span>
+          <div className="text-green-500 text-sm">
+            <span>+5% more than yesterday</span>
+          </div>
         </div>
+      </div>
 
         {/* Area chart */}
-        <ResponsiveContainer width="100%" height={200}>
+        <ResponsiveContainer width="100%" height={250}>
           <AreaChart data={chartData}>
             <XAxis dataKey="date" tick={{ fontSize: 12 }} hide={true} />
             <YAxis hide={true} />
             <Tooltip />
-            <ReferenceLine x="Page C" stroke="green" label="Min PAGE" />
-            <ReferenceLine
-              y={4000}
-              label="Max"
-              stroke="red"
-              strokeDasharray="3 3"
-            />
+
+
+            <Legend verticalAlign="top" height={36}/>
             <Area
               type="monotone"
-              dataKey="value"
-              stroke="#8884d8"
-              fill="#8884d8"
+              dataKey="Purchases"
+              stroke="#066fd1"
+              fill="#d7e8f8"
             />
           </AreaChart>
         </ResponsiveContainer>

@@ -3,10 +3,25 @@
 @tailwind utilities;
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
 
   .tabs {
     overflow-x: scroll;
+  }
+
+  .tablerText {
+    color: #182445;
   }

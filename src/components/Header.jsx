@@ -7,18 +7,18 @@ const Header = () => {
   const location = useLocation();
 
   const navLinks = [
-    { name: "Home", path: "/", icon: <House size={18} /> },
-    { name: "Interface", path: "/interface", icon: <Box size={18}/> },
-    { name: "Components", path: "/components", icon:  <Component size={18}/> },
-    { name: "Pages", path: "/pages", icon: <StickyNote size={18}/> },
-    { name: "Forms", path: "/forms", icon: <SquareCheckBig size={18}/> },
-    { name: "Gallery", path: "/gallery", icon: <Images size={18}/> },
-    { name: "Documentation", path: "/documentation",  icon: <FileText size={18}/> },
+    { name: "Home", path: "/", icon: <House size={20} /> },
+    { name: "Interface", path: "/interface", icon: <Box size={20}/> },
+    { name: "Components", path: "/components", icon:  <Component size={20}/> },
+    { name: "Pages", path: "/pages", icon: <StickyNote size={20}/> },
+    { name: "Forms", path: "/forms", icon: <SquareCheckBig size={20}/> },
+    { name: "Gallery", path: "/gallery", icon: <Images size={20}/> },
+    { name: "Documentation", path: "/documentation",  icon: <FileText size={20}/> },
   ];
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-      {/* Main header */}
+      {/* main header */}
       <div className="flex items-center justify-between py-4 sm:px-16 px-4 border-b">
         <div className="flex items-center space-x-4">
           <img src="/images/logo.png" alt="tabler logo" className="h-10" />
@@ -64,13 +64,13 @@ const Header = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`px-4 py-2 text-gray-600 hover:text-blue-600 flex gap-2 items-center ${
+              className={`px-4 py-2 text-[#182445] hover:text-blue-600 font-normal text-lg flex gap-2 items-center ${
                 location.pathname === link.path
                   ? "border-b-2 border-blue-600 font-medium text-blue-600"
                   : ""
               }`}
             >
-              <span>{link.icon}</span>
+              <span className="text-gray-400">{link.icon}</span>
               {link.name}
             </Link>
           ))}
